@@ -5,7 +5,7 @@ export default function About() {
     <div>
       <div>About</div>
       <div>
-        Back to <Link href="/">Home</Link>
+        Back to <Link href="/blog">Home</Link>
       </div>
     </div>
   )
