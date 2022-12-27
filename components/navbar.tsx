@@ -27,7 +27,7 @@ export default function NavBar() {
           </Link>
         </div>
         <div className="hidden md:flex md:visible flex-row space-x-5 justify-around items-center">
-          <Link href="/post" onClick={subMenuClose}>
+          <Link href="/posts" onClick={subMenuClose}>
             POST
           </Link>
           <Link href="/about" onClick={subMenuClose}>
