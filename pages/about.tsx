@@ -1,19 +1,19 @@
 import matter from "gray-matter";
-import md from "markdown-it";
 import fs from "fs";
+import markdownToHtml from "../lib/markdownToHtml";
 
 type AboutProps = {
   frontmatter: {
     [key: string]: any;
   };
-  content: string;
+  htmlcontent: string;
 };
 
-export default function About({ frontmatter, content }: AboutProps) {
+export default function About({ frontmatter, htmlcontent }: AboutProps) {
   return (
     <div className="prose mx-auto pt-10">
       <h1>{frontmatter.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: md().render(content) }} />
+      <div dangerouslySetInnerHTML={{ __html: htmlcontent }} />
     </div>
   );
 }
@@ -21,10 +21,11 @@ export default function About({ frontmatter, content }: AboutProps) {
 export async function getStaticProps() {
   const fileName = fs.readFileSync(`about/about.md`, "utf-8");
   const { data: frontmatter, content } = matter(fileName);
+  const htmlcontent = await markdownToHtml(content);
   return {
     props: {
       frontmatter,
-      content,
+      htmlcontent,
     },
   };
 }
