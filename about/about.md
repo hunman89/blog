@@ -4,46 +4,36 @@ tags:
   - about
 ---
 
-안녕하세요 개발을 즐기는 개발자 정성훈입니다.
+---
+
+> 안녕하세요 개발을 즐기는 개발자 정성훈입니다.
+> 회사에서 Spring 백엔드 개발을 하고 있고,
+> 취미로 이것저것 배우다 NextJs로 개발 하고 있습니다.
+
+---
 
 ## 경력
 
 ### 티맥스소프트 (2021.02 ~)
 
-연구원
-
-- **코드 구조 시각화 Tool** 2021.04
+- **미들웨어 플랫폼 백엔드 공통 부분** 2022.08 ~
+  - USER
+  - AUTH
+  - Kubernetes api
+- **코드 구조 시각화 Tool** 2022.04
   스프링 코드를 분석하여 controller, service, DAO의 관계를 시각화하는 툴
-  - 간단한 분석 과정 설계 참여 (JAVA AST parser)
   - 시각화 frontend 구현 (React, Material UI)
 - **클라우드 웹 IDE** 2021.02 ~ 2022.03
-  쿠버네티스에서 동작하는 theia기반의 웹 IDE
-  - master backend (Spring)
-    - JPA 추가
-    - k8s pod delete api 제작
-  - JWT를 이용한 auth (React, Material UI)
-    - 프론트엔드 (로그인, 회원가입) 부분 작업
-  - 프론트엔드 코드 개선
-    - axios api, mobx store 모듈화
-    - 로직 테스트 코드 추가
-  - nginx → webtob 전환
-  - rook-nfs 적용
-
----
-
-### 개발 이외 경력
-
-**퓨어스페이스** (2019.08~2020.05)
-책임연구원
-
-- 실험실 세팅
-- 10여종의 과일 실험 데이터 축적
-
-**롯데주류** (2015.08~2017.03)
-생산관리 사원
-
-- 품질관리
-- 맥주파일럿제품개발
+  쿠버네티스에서 동작하는 웹 IDE
+  - backend (Spring)
+    - JPA
+    - k8s api 제작
+  - frontend (React, Material UI)
+    - 로그인, 회원가입
+    - api 모듈화
+  - kubernetes
+    - nginx → webtob 전환
+    - rook-nfs 적용
 
 ---
 
@@ -51,30 +41,28 @@ tags:
 
 ### 제타푸드랩 홈페이지 (2022)
 
-15페이지 정도의 회사 소개 웹페이지
+회사 소개 웹페이지
 
 - NextJS, TypeScript
 - https://github.com/hunman89/zeta-food-lab-front
-- [https://zeta-food-lab-front.vercel.app/](https://zeta-food-lab-front.vercel.app/)
+- [https://www.zetafoodlab.com/](https://www.zetafoodlab.com/)
 
----
+### **NalSeed (2021)**
 
-### **NalSeed 홈페이지 (2021)**
-
-Kamis(농산물 유통정보)에서 매일 데이터 받아와서 시각화
+Kamis(농산물 유통정보)에서 받아온 데이터 시각화
 
 - NestJS, GraphQL, React, TypeScript
 - https://github.com/hunman89/forecast-system-backend
 - https://github.com/hunman89/forecast_system
 - [http://nonguplab.com/](http://nonguplab.com/)
 
+---
+
 ## 보유역량
 
-TypeScript, React (중하)
+Spring, NextJS
 
-Java, Spring, NextJS (하)
-
-git, JPA, typeORM, mybatis, Kubernetes, docker (하)
+---
 
 ## 교육
 
@@ -82,14 +70,22 @@ git, JPA, typeORM, mybatis, Kubernetes, docker (하)
 
 2020.07~2020.12
 
-**서울대학교 대학원 식품생명공학과 (졸업)**
+---
 
-2017.09~2019.08
+## 기타
 
-**서울대학교 식품생명공학과 (졸업)**
+**퓨어스페이스** (2019.08~2020.05)
+책임연구원
 
-2009.03~2015.08
+- 실험실 세팅
+- 10여종의 과일 실험 데이터 축적
 
-**창원남고등학교 (졸업)**
+**서울대학교 대학원 식품생명공학과 (졸업)** (2017.09~2019.08)
 
-2004.03~2007.02
+**롯데주류** (2015.08~2017.03)
+생산관리 사원
+
+- 품질관리
+- 맥주 파일럿 제품 개발
+
+**서울대학교 식품생명공학과 (졸업)** (2009.03~2015.08)
