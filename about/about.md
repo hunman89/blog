@@ -7,8 +7,8 @@ tags:
 ---
 
 > 안녕하세요 개발을 즐기는 개발자 정성훈입니다.
-> 회사에서 Spring 백엔드 개발을 하고 있고,
-> 취미로 이것저것 배우다 NextJs로 개발 하고 있습니다.
+> 회사에서 Java로 백엔드 개발을 하고 있고,
+> Next.js, Flutter를 공부하고 있습니다.
 
 ---
 
@@ -16,24 +16,12 @@ tags:
 
 ### 티맥스소프트 (2021.02 ~)
 
-- **미들웨어 플랫폼 백엔드 공통 부분** 2022.08 ~
-  - USER
-  - AUTH
-  - Kubernetes api
-- **코드 구조 시각화 Tool** 2022.04
-  스프링 코드를 분석하여 controller, service, DAO의 관계를 시각화하는 툴
-  - 시각화 frontend 구현 (React, Material UI)
-- **클라우드 웹 IDE** 2021.02 ~ 2022.03
-  쿠버네티스에서 동작하는 웹 IDE
-  - backend (Spring)
-    - JPA
-    - k8s api 제작
-  - frontend (React, Material UI)
-    - 로그인, 회원가입
-    - api 모듈화
-  - kubernetes
-    - nginx → webtob 전환
-    - rook-nfs 적용
+- **미들웨어 통합 플랫폼 백엔드 공통 부분** 2022.08 ~
+  - Spring Boot
+- **코드 구조 시각화 Tool** 2022.04 ~ 07
+  - React
+- **웹 IDE 플랫폼** 2021.02 ~ 2022.03
+  - Spring Boot, React
 
 ---
 
@@ -54,13 +42,6 @@ Kamis(농산물 유통정보)에서 받아온 데이터 시각화
 - NestJS, GraphQL, React, TypeScript
 - https://github.com/hunman89/forecast-system-backend
 - https://github.com/hunman89/forecast_system
-- [http://nonguplab.com/](http://nonguplab.com/)
-
----
-
-## 보유역량
-
-Spring, NextJS
 
 ---
 
@@ -89,3 +70,5 @@ Spring, NextJS
 - 맥주 파일럿 제품 개발
 
 **서울대학교 식품생명공학과 (졸업)** (2009.03~2015.08)
+
+---
