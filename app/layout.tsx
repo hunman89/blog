@@ -10,14 +10,14 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html>
       <head><title>hunman&apos;s blog</title></head>
       <body>
-        <div className="max-w-2xl mx-auto py-10 px-4">
+        <div className="max-w-4xl mx-auto py-10 px-4">
           <header>
             <div className="flex items-center justify-between border-stone-700 border-b-2">
-              <nav className="flex flex-row items-center justify-between w-full font-bold text-stone-700 ">
+              <nav className="flex flex-row items-center justify-between w-full font-bold text-stone-700 px-1">
                 <div className=' text-6xl'>Hunman</div>
                 <div className='flex flex-row space-x-6'>
                   <Link href="/">Home</Link>
-                  <Link href="/about">About</Link>
+                  <a href="https://www.linkedin.com/in/hunman/" target="_blank">About</a>
                 </div>
               </nav>
             </div>
