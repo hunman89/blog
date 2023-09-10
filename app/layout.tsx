@@ -15,10 +15,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html>
       <body>
-        <div className="max-w-4xl mx-auto py-10 px-4">
+        <div className="relative ">
           <header>
-            <div className="flex items-center justify-between border-stone-700 border-b-2">
-              <nav className="flex flex-row items-center justify-between w-full font-bold text-stone-700 px-1 pb-2">
+            <div className="fixed flex w-full h-16 items-center justify-center border-stone-700 border-b-2">
+              <nav className="flex flex-row items-center justify-between w-full max-w-4xl font-bold bg-white bg-opacity-50 text-stone-700 px-3">
                 <div className=" text-6xl">
                   <span className=" text-emerald-500">H</span>unman
                 </div>
@@ -31,7 +31,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
               </nav>
             </div>
           </header>
-          <main>{children}</main>
+          <main className="max-w-4xl mx-auto pt-16 px-4">{children}</main>
         </div>
       </body>
     </html>
