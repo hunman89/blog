@@ -1,25 +1,15 @@
-import PostCard, { PostCardInfo } from "./components/post-card";
+import { getSortedPostsData } from "@/lib/posts";
+import PostCard from "../components/post-card";
 
-export default function Home() {
-  const datas: PostCardInfo[] = [
-    {
-      title: "test1",
-      date: "2023-09-09",
-      description:
-        "이것은 테스트용 입니다. 감사합니다.이것은 테스트용 입니다. 감사합니다.이것은 테스트용 입니다. 감사합니다.이것은 테스트용 입니다. 감사합니다.이것은 테스트용 입니다. 감사합니다.이것은 테스트용 입니다. 감사합니다.이것은 테스트용 입니다. 감사합니다.이것은 테스트용 입니다. 감사합니다.",
-    },
-    {
-      title: "test2",
-      date: "2023-09-09",
-      description: "이것은 테스트용 입니다. 감사합니다",
-    },
-  ];
+export default async function Home() {
+  const datas = await getSortedPostsData();
+
   return (
     <div className=" py-10 px-5 grid grid-cols-1 gap-4">
-      {datas.map((data, index) => {
+      {datas.map((data) => {
         return (
           <PostCard
-            key={index}
+            key={data.id}
             title={data.title}
             date={data.date}
             description={data.description}
