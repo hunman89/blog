@@ -31,7 +31,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
               </nav>
             </div>
           </header>
-          <main className="max-w-4xl mx-auto pt-16 px-4">{children}</main>
+          <main className="max-w-4xl mx-auto px-4">
+            <div className=" h-16"></div>
+            <div>{children}</div>
+          </main>
         </div>
       </body>
     </html>
