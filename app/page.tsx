@@ -13,7 +13,7 @@ export default async function Home() {
             id={postData.id}
             title={postData.title}
             date={postData.date}
-            description={postData.description}
+            descriptions={postData.descriptions}
           />
         );
       })}

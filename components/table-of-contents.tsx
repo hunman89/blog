@@ -4,9 +4,9 @@ import mergeClasses from "@/lib/merge-classes";
 import { Heading } from "@/lib/posts";
 import React from "react";
 
-type TableOfContentsProps = {
+interface TableOfContentsProps {
   headings: Heading[];
-};
+}
 
 export default function TableOfContents({ headings }: TableOfContentsProps) {
   const [active, setActive] = React.useState(

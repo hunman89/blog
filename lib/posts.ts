@@ -1,11 +1,43 @@
 import fs from "fs";
 import path from "path";
-import matter from "gray-matter";
+import matter, { GrayMatterFile } from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
 import { rehype } from "rehype";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeSlug from "rehype-slug";
+export interface Post {
+  id: string;
+  contentHtml: string;
+  title: string;
+  date: string;
+  descriptions: string;
+  headings: Heading[];
+}
+
+export interface SimplePost {
+  id: string;
+  title: string;
+  date: string;
+  descriptions: string;
+}
+
+interface FrontMatter {
+  title: string;
+  date: string;
+  descriptions: string;
+}
+
+interface MyGrayMatterFile extends GrayMatterFile<string> {
+  data: FrontMatter;
+  content: string;
+}
+
+export interface Heading {
+  slug: string;
+  title: string;
+  level: number;
+}
 
 const postsDirectory = path.join(process.cwd(), "posts");
 
@@ -22,31 +54,26 @@ export function getSortedPostsData() {
 }
 
 // todo: type 변경
-export function getAllPosts(): {
-  [key: string]: any;
-}[] {
+export function getAllPosts(): SimplePost[] {
   const fileNames = fs.readdirSync(postsDirectory);
   return fileNames.map((fileName) => {
     const id = fileName.replace(/\.md$/, "");
     const fullPath = path.join(postsDirectory, fileName);
     const fileContents = fs.readFileSync(fullPath, "utf8");
-    const matterResult = matter(fileContents);
+    const matterResult = matter(fileContents) as MyGrayMatterFile;
 
     return {
       id,
-      fullPath,
       ...matterResult.data,
     };
   });
 }
 
-export async function getPost(id: string): Promise<{
-  [key: string]: any;
-}> {
+export async function getPost(id: string): Promise<Post> {
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
 
-  const matterResult = matter(fileContents);
+  const matterResult = matter(fileContents) as MyGrayMatterFile;
 
   const processedContent = await remark()
     .use(html)
@@ -66,12 +93,6 @@ export async function getPost(id: string): Promise<{
     ...matterResult.data,
     headings,
   };
-}
-
-export interface Heading {
-  slug: string;
-  title: string;
-  level: number;
 }
 
 export function extractHeadingsLevel2(content: string): Array<Heading> {
