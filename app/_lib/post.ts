@@ -15,7 +15,7 @@ export interface PostData {
 
 export interface SimplePostData {
   id: string;
-  date: string;
+  date: Date;
   title: string;
 }
 
@@ -30,7 +30,7 @@ export function getSortedPostsData(): SimplePostData[] {
 
     return {
       id,
-      ...(matterResult.data as { date: string; title: string }),
+      ...(matterResult.data as { date: Date; title: string }),
     };
   });
 
