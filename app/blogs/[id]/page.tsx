@@ -5,7 +5,10 @@ export default async function Blog({ params }: { params: { id: string } }) {
   return (
     <>
       <div>My Post: {postData.title}</div>
-      <div>{postData.contentHtml}</div>
+      <div
+        className="prose"
+        dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+      ></div>
     </>
   );
 }
